@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="estil.css">
+</head>
+<body>
+    <style>
+        img {
+            width: 60px;
+        }
+
+        caja1{
+            display: flex;
+            justify-content: space-between;
+        }
+
+
+        caja2{
+            display: flex;
+            flex-direction: column;
+        }
+
+
+
+        caja3{
+            display: flex;
+            justify-content: center;
+        }
+
+        caja4{
+            display: flex;
+            justify-content: center;
+            background-color: lightskyblue;
+        }
+
+
+
+        .p2{
+            background-color: lightyellow;
+        }
+
+
+        .p3,.p4,.p5{
+          flex: 0 1 150px;
+          background-color: lightyellow;
+          margin: 5px;
+        }
+
+
+        caja5{
+            resize: both;
+            overflow: auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            background-color: lightskyblue;
+            align-items: stretch;
+        }
+
+
+
+        .p6{
+            background-color: lightyellow;
+        }
+
+        .p7{
+            background-color: lightpink;
+        }
+
+
+
+        caja6{
+            resize: both;
+            overflow: auto;
+            display: grid;
+            grid-template-columns: minmax(150px, 25%) 1fr;
+        }
+
+
+        .p8{
+            background-color: lightyellow;
+        }
+
+        .p9{
+            background-color: lightsalmon;
+        }
+
+        .p10{
+            background-color: lightpink;
+        }
+
+        caja7{
+            resize: both;
+            overflow: auto;
+            display: grid;
+            grid-template-rows: auto 1fr auto;
+        }
+
+
+        caja8{
+            resize: both;
+            overflow: auto;
+            display: grid;
+            grid-template-columns: auto 1fr auto;
+            grid-template-rows: auto 1fr auto;
+            background-color: lightskyblue;
+    }
+
+
+    
+        .p11{
+        background-color:lightpink;
+        grid-column: 1 / 4;
+     }
+        .p12{
+        background-color: lightblue;
+        }
+        .p13{
+        background-color: lightsalmon;
+        }
+        .p14{
+        background-color: lightyellow;
+      }
+        .p15{
+        background-color: lightgreen;
+        grid-column: 1 / 4;
+    }
+
+
+        caja9{
+            resize: both;
+            overflow: auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        }
+
+        .p16{
+            background-color:lightpink;
+        }
+        .p17{
+            background-color: lightblue;
+        }
+        .p18{
+            background-color: lightsalmon;
+        }
+        .p19{
+            background-color: lightyellow;
+        }
+
+
+
+        caja10{
+            resize: both;
+            overflow: auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+            padding: 1em;
+            border: 1px solid blue;
+        }
+
+        .p20{
+            background-color:lightpink;
+        }
+        .p21{
+            background-color: lightblue;
+        }
+        .p22{
+            background-color: lightsalmon;
+        }
+        .p23{
+            background-color: lightyellow;
+        }
+
+
+
+    </style>
+
+    <caja1>
+        <span>🤖</span>
+        <span>RobotWeb</span>
+        <span>🔎</span>
+    </caja1>
+
+    <caja2>
+        <img src="1.webp">
+        <img src="2.webp">
+        <img src="3.webp">
+        <img src="4.webp">
+    </caja2>
+
+
+    <caja3>
+        <p class="p1">Welcome to RobotWeb</p>
+    </caja3>
+
+    <caja4>
+        <p class="p2">Estoy siempre centrado</p>
+    </caja4>
+
+    <p> </p>
+
+    <caja5>
+        <div class="p3">Crezco hacia abajo y tengo un ancho máximo de 150px [150 x 115]</div>
+        <div class="p4">Crezco hacia abajo y tengo un ancho máximo de 150px [150 x 115]</div>
+        <div class="p5">Crezco hacia abajo y tengo un ancho máximo de 150px [150 x 115]</div>
+    </caja5>
+
+    <p> </p>
+
+    <caja6>
+    <div class="p6">Tengo un ancho mínimo de 150px, y un máximo del 25% [208 x 86]</div>
+    <div class="p7">Ocupo el resto de espacio sobrante [624 x 86]</div>
+    </caja6>
+   
+    <p> </p>
+
+    <caja7>
+        <div class="p8">Ocupo solo la altura que necesito [832 x 58]</div>
+        <div class="p9">Ocupo el resto de altura sobrante [832 x 58]</div>
+        <div class="p10">Ocupo solo la altura que necesito [832 x 58]</div>
+    </caja7>
+
+
+    <p> </p>
+
+
+    <caja8>
+        <div class="p11">Ocupo solo la altura que necesito [832 x 58]</div>
+        <div class="p12">Ocupo el ancho que necesito, y crezco de altura [209 x 86]</div>
+        <div class="p13">Ocupo el ancho restante, y crezco de altura [415 x 86]</div>
+        <div class="p14">Ocupo el ancho que necesito, y crezco de altura [209 x 86]</div>
+        <div class="p15">Ocupo solo la altura que necesito [832 x 58]</div>
+    </caja8>
+    
+
+    <p> </p>
+
+    <caja9>
+        <div class="p16">Tenemos un ancho mínimo de 100px. Si no cabemos todos en una fila, ocupamos otra [208 x 144]</div>
+        <div class="p17">Tenemos un ancho mínimo de 100px. Si no cabemos todos en una fila, ocupamos otra [208 x 144]</div>
+        <div class="p18">Tenemos un ancho mínimo de 100px. Si no cabemos todos en una fila, ocupamos otra [208 x 144]</div>
+        <div class="p19">Tenemos un ancho mínimo de 100px. Si no cabemos todos en una fila, ocupamos otra [208 x 144]</div>
+    </caja9>
+
+    <p> </p>
+
+
+    <caja10>
+        <div class="p20">Tenemos un ancho de 100px. Si no cabemos todos en una fila, ocupamos otra [114 x 202]</div>
+        <div class="p21">Tenemos un ancho de 100px. Si no cabemos todos en una fila, ocupamos otra [114 x 202]</div>
+        <div class="p22">Tenemos un ancho de 100px. Si no cabemos todos en una fila, ocupamos otra  [114 x 202]</div>
+        <div class="p23">Tenemos un ancho de 100px. Si no cabemos todos en una fila, ocupamos otra [114 x 202]</div>
+    </caja10>
+
+
+
+
+</body>
+</html>
